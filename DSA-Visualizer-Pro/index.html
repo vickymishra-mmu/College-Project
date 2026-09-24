@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070b1a" />
+  <title>DSA Visualizer Pro — Explore • Visualize • Learn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-glow"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <header class="topbar" id="topbar">
+    <a href="#home" class="brand">
+      <span class="brand-mark">◇</span>
+      <span><b>DSA</b> Visualizer</span>
+      <em>PRO</em>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#algorithms">Algorithms</a>
+      <a href="#lab">Visualizer Lab</a>
+      <a href="#blueprint">Blueprint</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="top-actions">
+      <span class="status-dot"></span><span class="status-text">Engine Ready</span>
+      <button class="icon-btn" id="themeBtn" title="Toggle visual theme" aria-label="Toggle visual theme">☼</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="grid-overlay"></div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> INTERACTIVE COMPUTER SCIENCE LAB</div>
+        <h1>Make algorithms<br /><span class="gradient-text">come alive.</span></h1>
+        <p class="hero-sub">A futuristic, browser-based DSA playground where sorting, searching, graphs, stacks and queues turn into live step-by-step animations.</p>
+        <div class="hero-cta">
+          <a class="primary-btn" href="#lab"><span>Launch Visualizer</span><span class="arrow">↗</span></a>
+          <a class="ghost-btn" href="#algorithms">Explore Algorithms</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="algoCount">11</strong><span>Visual Algorithms</span></div>
+          <div><strong>60 FPS</strong><span>Smooth Motion</span></div>
+          <div><strong>100%</strong><span>Client Side</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-1">
+        <div class="floating-chip chip-a">BUBBLE SORT <b>O(n²)</b></div>
+        <div class="floating-chip chip-b">BFS <b>O(V+E)</b></div>
+        <div class="floating-chip chip-c">BINARY SEARCH <b>O(log n)</b></div>
+
+        <div class="holo-card">
+          <div class="holo-top">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>visualizer.js</span>
+            <span class="mini-live">LIVE</span>
+          </div>
+          <div class="holo-body">
+            <div class="code-line faint"><span>01</span> <b>const</b> array = <em>[38, 12, 78, 23, 61]</em></div>
+            <div class="code-line"><span>02</span> <b>for</b> (let i = 0; i &lt; n; i++) {</div>
+            <div class="code-line active"><span>03</span> &nbsp;&nbsp;compare(array[j], array[j+1]);</div>
+            <div class="code-line"><span>04</span> &nbsp;&nbsp;swap();</div>
+            <div class="code-line faint"><span>05</span> }</div>
+            <div class="hero-bars" aria-label="Animated array preview">
+              <span style="height:34%"></span><span style="height:61%"></span><span style="height:48%"></span><span style="height:79%"></span><span style="height:56%"></span><span style="height:30%"></span><span style="height:88%"></span>
+            </div>
+            <div class="holo-footer"><span><b class="pulse-dot"></b> Running</span><span>Comparisons: 08</span><span>Swaps: 03</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-strip reveal" id="algorithms">
+      <div class="section-heading">
+        <div><span class="eyebrow">01 / ALGORITHM DECK</span><h2>Pick a concept. <span>Watch it think.</span></h2></div>
+        <p>Each module uses JavaScript to execute the real algorithm while the interface animates every important state change.</p>
+      </div>
+
+      <div class="category-grid">
+        <button class="category-card category-sort" data-open="sorting">
+          <div class="card-glow"></div><div class="icon-box">↕</div>
+          <span class="card-kicker">01 / SORTING</span><h3>Order the chaos.</h3><p>Bubble, Selection, Insertion, Merge and Quick Sort with live comparisons and swaps.</p><div class="card-arrow">Explore <b>→</b></div>
+        </button>
+        <button class="category-card category-search" data-open="searching">
+          <div class="card-glow"></div><div class="icon-box">⌕</div>
+          <span class="card-kicker">02 / SEARCHING</span><h3>Find the signal.</h3><p>See how Linear and Binary Search reduce a problem one decision at a time.</p><div class="card-arrow">Explore <b>→</b></div>
+        </button>
+        <button class="category-card category-graph" data-open="graph">
+          <div class="card-glow"></div><div class="icon-box">⌘</div>
+          <span class="card-kicker">03 / GRAPHS</span><h3>Traverse the network.</h3><p>Follow BFS and DFS as nodes move from unexplored to discovered to visited.</p><div class="card-arrow">Explore <b>→</b></div>
+        </button>
+        <button class="category-card category-ds" data-open="structures">
+          <div class="card-glow"></div><div class="icon-box">▤</div>
+          <span class="card-kicker">04 / DATA STRUCTURES</span><h3>Shape the data.</h3><p>Interact with Stack and Queue operations and watch elements enter and leave.</p><div class="card-arrow">Explore <b>→</b></div>
+        </button>
+      </div>
+    </section>
+
+    <section class="section lab-section" id="lab">
+      <div class="section-heading compact reveal">
+        <div><span class="eyebrow">02 / VISUALIZER LAB</span><h2>Live <span>algorithm room</span></h2></div>
+        <div class="lab-mode"><span>MODE</span><b id="labMode">SORTING</b></div>
+      </div>
+
+      <div class="lab-shell reveal delay-1">
+        <aside class="lab-sidebar">
+          <div class="sidebar-title">MODULES <span>⌁</span></div>
+          <button class="lab-nav active" data-lab="sorting"><span>↕</span> Sorting</button>
+          <button class="lab-nav" data-lab="searching"><span>⌕</span> Searching</button>
+          <button class="lab-nav" data-lab="graph"><span>⌘</span> Graph Traversal</button>
+          <button class="lab-nav" data-lab="structures"><span>▤</span> Stack & Queue</button>
+          <div class="sidebar-tip"><b>TIP</b><p>Use <kbd>Next Step</kbd> to teach the algorithm one move at a time.</p></div>
+        </aside>
+
+        <div class="lab-main">
+          <div class="lab-toolbar">
+            <div>
+              <label for="algorithmSelect">ALGORITHM</label>
+              <select id="algorithmSelect"></select>
+            </div>
+            <div class="toolbar-actions">
+              <button class="small-btn" id="randomBtn">✦ Randomize</button>
+              <button class="small-btn danger" id="resetBtn">↺ Reset</button>
+            </div>
+          </div>
+
+          <div id="visualizerStage" class="visualizer-stage"></div>
+
+          <div class="control-deck">
+            <div class="transport">
+              <button class="control-btn primary" id="playBtn">▶ <span>Start</span></button>
+              <button class="control-btn" id="pauseBtn" disabled>Ⅱ Pause</button>
+              <button class="control-btn" id="stepBtn">→| Step</button>
+            </div>
+            <div class="speed-control"><span>Speed</span><input type="range" id="speedRange" min="1" max="10" value="6" /><b id="speedLabel">Fast</b></div>
+          </div>
+
+          <div class="insight-grid">
+            <div class="insight-card"><div class="insight-head"><span>LIVE LOG</span><span id="stepLabel">Step 0</span></div><div id="liveLog" class="live-log">Ready — choose an algorithm and press Start.</div></div>
+            <div class="insight-card complexity"><div class="insight-head"><span>COMPLEXITY</span><span id="complexityTag">O(n²)</span></div><div class="complexity-row"><span>Best</span><b id="bestComplexity">O(n)</b></div><div class="complexity-row"><span>Average</span><b id="avgComplexity">O(n²)</b></div><div class="complexity-row"><span>Worst</span><b id="worstComplexity">O(n²)</b></div><div class="complexity-row"><span>Space</span><b id="spaceComplexity">O(1)</b></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-section reveal">
+      <div class="section-heading compact"><div><span class="eyebrow">03 / LEARNING LOOP</span><h2>From code to <span>Intuition.</span></h2></div></div>
+      <div class="steps-grid">
+        <div class="step-card"><span>01</span><div class="step-icon">⌘</div><h3>Select</h3><p>Choose an algorithm, generate input, and set the playback speed.</p></div>
+        <div class="step-card"><span>02</span><div class="step-icon">◌</div><h3>Visualize</h3><p>Watch real comparisons, decisions, swaps, visits and structural changes animate live.</p></div>
+        <div class="step-card"><span>03</span><div class="step-icon">✦</div><h3>Understand</h3><p>Read the live log and complexity panel to connect motion with Big-O reasoning.</p></div>
+      </div>
+    </section>
+
+    <section class="section blueprint-section" id="blueprint">
+      <div class="section-heading compact reveal"><div><span class="eyebrow">04 / PROJECT BLUEPRINT</span><h2>The visual <span>direction.</span></h2></div><p>This design board is included with the project.</p></div>
+      <div class="blueprint-frame reveal delay-1"><img src="assets/project-blueprint.png" alt="DSA Visualizer project blueprint" /><div class="blueprint-scan"></div></div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-card reveal"><div><span class="eyebrow">05 / ABOUT THE BUILD</span><h2>Algorithms <span>Brought to life. </span></h2><p>This project is made by VINAYAK KUMAR MISHRA Roll No: 11252598.</p></div><div class="stack-list"><div><b>HTML5</b><span>Semantic layout</span></div><div><b>CSS3</b><span>Responsive motion UI</span></div><div><b>JavaScript</b><span>Algorithms + animation engine</span></div></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><span>DSA Visualizer Pro</span><span>Explore • Visualize • Learn</span><span>Built by Vinayak Kumar Mishra.</span></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
